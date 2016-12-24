@@ -54,9 +54,22 @@ class NoteBook(object):
     @name.setter
     def name(self, value):
         if value:
-            self._name = name
+            self._name = value
         else:
             raise ValueError("You did not provide valid name")
+
+    @property
+    def nbid(self):
+        return self._nbid
+
+    @nbid.setter
+    def nbid(self, value):
+        if value:
+            self._nbid = value
+        else:
+            raise ValueError("You did not provide valid nbid")
+
+    
 
     @property
     def cover_url(self):

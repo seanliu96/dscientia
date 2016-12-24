@@ -8,5 +8,5 @@ echo "###然后我安静的发现
 
 git add *
 date | xargs -I{} git commit -m {}
-#git push origin master
+git push origin master
 

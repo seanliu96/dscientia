@@ -59,11 +59,18 @@ class RegisterHandler(BaseHandler):
             "pwd": self.get_argument("pwd", None),
             "avatar": self.request.files["avatar"][0]["body"] if "avatar" in self.request.files else None,
         }
+        new_notebook_kw = {
+            "name": "我的第一个笔记本",
+            "cover": None,
+        }
         if User.is_name_exist(new_user_kw["name"]):
             self.write(self.make_result(0, "name already exists", None))
             return
         try:
             new_user = User(**new_user_kw)
+            new_notebook = NoteBook(**new_notebook_kw)
+            new_user.add_notebook(new_user.uid, new_notebook.nbid)
+            new_notebook.save()
             new_user.save()
             self.write(self.make_result(1, "register OK", None))
         except ValueError as e:

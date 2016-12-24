@@ -32,6 +32,7 @@ class NoteBook(object):
                 {
                     "name": self.name,
                     "cover_url": self.cover_url,
+                    "notes": self.notes,
                     "datetime": datetime.now(),
                 },
             )

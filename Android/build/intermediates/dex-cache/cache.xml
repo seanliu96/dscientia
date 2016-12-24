@@ -2,249 +2,88 @@
 <items version="2" >
 
     <item
-        jar="/Users/renwendi/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
-        <dex dex="/Users/renwendi/Documents/class/database/Lehuo/Lehuo/app/build/intermediates/pre-dexed/debug/library-2.4.0-52bd86b812a2d7fa1bf4692c82dc594b5810dce8.jar" />
-    </item>
-    <item
-        jar="/Users/renwendi/Documents/class/database/Lehuo/Lehuo/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/0.6.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="b5eb6c5f132d34f7ece3fbae25feb43e4ea9d6aa">
-        <dex dex="/Users/renwendi/Documents/class/database/Lehuo/Lehuo/app/build/intermediates/pre-dexed/debug/classes-68837464618faf679461b1997941123a99c34d01.jar" />
-    </item>
-    <item
-        jar="/Users/renwendi/Desktop/E20/E1/Lehuo2/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/0.6.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="b5eb6c5f132d34f7ece3fbae25feb43e4ea9d6aa">
-        <dex dex="/Users/renwendi/Desktop/E20/E1/Lehuo2/app/build/intermediates/pre-dexed/debug/classes-1f8ba3abf31eec40509c200a6463daa9c68896d3.jar" />
-    </item>
-    <item
-        jar="/Users/renwendi/Desktop/E1/Lehuo2/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/jars/libs/internal_impl-23.2.0.jar"
+        jar="D:\E20\E1\Lehuo2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\jars\libs\internal_impl-23.2.0.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="6e239441500605809818997dd63b62a947195f8c">
-        <dex dex="/Users/renwendi/Desktop/E1/Lehuo2/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.0-f9a831a145ece680052732e78c9e716dbf0702c6.jar" />
+        <dex dex="D:\E20\E1\Lehuo2\app\build\intermediates\pre-dexed\debug\internal_impl-23.2.0-e9790b50cbeef1042eb1e011f6da99ee43324989.jar" />
     </item>
     <item
-        jar="/Users/renwendi/Documents/class/database/Lehuo/Lehuo/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
-        <dex dex="/Users/renwendi/Documents/class/database/Lehuo/Lehuo/app/build/intermediates/pre-dexed/debug/classes-5eac8d26f3cec63ee9ec4020f3cc17866e6f0719.jar" />
-    </item>
-    <item
-        jar="/Users/renwendi/Desktop/E20/E1/Lehuo2/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/0.6.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d572f92ecb6ae3b66e807550b07e4a6cca1f737f">
-        <dex dex="/Users/renwendi/Desktop/E20/E1/Lehuo2/app/build/intermediates/pre-dexed/debug/classes-69bab07e359f2d924db1dfdc1b5cb75f54dd2760.jar" />
-    </item>
-    <item
-        jar="/Users/renwendi/Desktop/E1/Lehuo2/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="e5f32fa48a3eb2de0c987025c11b6e3864b634d9">
-        <dex dex="/Users/renwendi/Desktop/E1/Lehuo2/app/build/intermediates/pre-dexed/debug/classes-1099aea9444457a9034446d593e1f9c0c57f824b.jar" />
-    </item>
-    <item
-        jar="/Users/renwendi/Desktop/E1/Lehuo2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
-        <dex dex="/Users/renwendi/Desktop/E1/Lehuo2/app/build/intermediates/pre-dexed/debug/classes-23b2949500f208f4148e455877b02cc83e1f0c60.jar" />
-    </item>
-    <item
-        jar="/Users/renwendi/Documents/software/android-sdk-macosx/extras/android/m2repository/com/android/support/support-annotations/23.2.0/support-annotations-23.2.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="c5bf571bb10462bd90e5419ade67793f71acbc87">
-        <dex dex="/Users/renwendi/Desktop/E1/Lehuo2/app/build/intermediates/pre-dexed/debug/support-annotations-23.2.0-ae8dd69c734f3a0e5f6f137a51f36c397de0d5f3.jar" />
-    </item>
-    <item
-        jar="/Users/renwendi/Documents/class/database/Lehuo/Lehuo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
-        <dex dex="/Users/renwendi/Documents/class/database/Lehuo/Lehuo/app/build/intermediates/pre-dexed/debug/classes-49571244a9a282b829316c37711e8dd023a38854.jar" />
-    </item>
-    <item
-        jar="/Users/renwendi/Desktop/E20/E1/Lehuo2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
-        <dex dex="/Users/renwendi/Desktop/E20/E1/Lehuo2/app/build/intermediates/pre-dexed/debug/classes-db1857bbc1e4228d6e184ab189c26092ee8650b2.jar" />
-    </item>
-    <item
-        jar="/Users/renwendi/Documents/class/database/Lehuo/Lehuo/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/0.6.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d572f92ecb6ae3b66e807550b07e4a6cca1f737f">
-        <dex dex="/Users/renwendi/Documents/class/database/Lehuo/Lehuo/app/build/intermediates/pre-dexed/debug/classes-2d5011aa68ac370cbe89325df83522608b010f7a.jar" />
-    </item>
-    <item
-        jar="/Users/renwendi/Desktop/E1/Lehuo2/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/0.6.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d572f92ecb6ae3b66e807550b07e4a6cca1f737f">
-        <dex dex="/Users/renwendi/Desktop/E1/Lehuo2/app/build/intermediates/pre-dexed/debug/classes-1f54fe1c2b258296b4f0e363133bca25c446635b.jar" />
-    </item>
-    <item
-        jar="/Users/renwendi/Documents/class/database/Lehuo/Lehuo/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
-        <dex dex="/Users/renwendi/Documents/class/database/Lehuo/Lehuo/app/build/intermediates/pre-dexed/debug/classes-aca9df716a6eb11ad0c2044120695168bcce3f62.jar" />
-    </item>
-    <item
-        jar="/Users/renwendi/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.1.4/129874135e6081269ace2312092031558865de12/bolts-android-1.1.4.jar"
+        jar="C:\Users\Noel_Cat\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.1.4\129874135e6081269ace2312092031558865de12\bolts-android-1.1.4.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="129874135e6081269ace2312092031558865de12">
-        <dex dex="/Users/renwendi/Documents/class/database/Lehuo/Lehuo/app/build/intermediates/pre-dexed/debug/bolts-android-1.1.4-179559615b1f748a94fa8d44b987e40c140560af.jar" />
+        <dex dex="D:\E20\E1\Lehuo2\app\build\intermediates\pre-dexed\debug\bolts-android-1.1.4-713709519a74427d6e41f7896c7eba1b97afa0a4.jar" />
     </item>
     <item
-        jar="/Users/renwendi/Desktop/E20/E1/Lehuo2/app/libs/commons-codec-1.9.jar"
+        jar="D:\E20\E1\Lehuo2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="9ce04e34240f674bc72680f8b843b1457383161a">
-        <dex dex="/Users/renwendi/Desktop/E20/E1/Lehuo2/app/build/intermediates/pre-dexed/debug/commons-codec-1.9-58670160649df68db36c0c3581c1b0e78b6fc748.jar" />
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="D:\E20\E1\Lehuo2\app\build\intermediates\pre-dexed\debug\classes-8787fb491de83a34684a9a5854a89b305c0fa4aa.jar" />
     </item>
     <item
-        jar="/Users/renwendi/Desktop/E1/Lehuo2/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/0.6.0/jars/classes.jar"
+        jar="D:\E20\E1\Lehuo2\app\build\intermediates\exploded-aar\com.facebook.fresco\fbcore\0.6.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="27ebd5d2c69a1830b4ff47a1d5d4c6a4aab5e233">
-        <dex dex="/Users/renwendi/Desktop/E1/Lehuo2/app/build/intermediates/pre-dexed/debug/classes-85d0f6855ab17b03dc8c409bdc6190c33de32055.jar" />
+        sha1="87bffaacf21eb2c6fc61cf01930ff96ae175e798">
+        <dex dex="D:\E20\E1\Lehuo2\app\build\intermediates\pre-dexed\debug\classes-0bd0e0d61b452d2dbf7b85455dc8e7a244bc6988.jar" />
     </item>
     <item
-        jar="/Users/renwendi/Documents/class/database/Lehuo/Lehuo/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="aee64634871d88a419d59eb743c1258a60f19700">
-        <dex dex="/Users/renwendi/Documents/class/database/Lehuo/Lehuo/app/build/intermediates/pre-dexed/debug/classes-504577f445fa654591dc7c685d14c9f7e231f7d7.jar" />
-    </item>
-    <item
-        jar="/Users/renwendi/Desktop/E1/Lehuo2/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/0.6.0/jars/classes.jar"
+        jar="D:\E20\E1\Lehuo2\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline\0.6.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="b5eb6c5f132d34f7ece3fbae25feb43e4ea9d6aa">
-        <dex dex="/Users/renwendi/Desktop/E1/Lehuo2/app/build/intermediates/pre-dexed/debug/classes-8e7aa8b0c537853951bf7866d259e9b8d1e502d7.jar" />
+        <dex dex="D:\E20\E1\Lehuo2\app\build\intermediates\pre-dexed\debug\classes-b9cf2e0df3eec86fc5e66c9d38f2c4672cb3f6cf.jar" />
     </item>
     <item
-        jar="/Users/renwendi/Desktop/E20/E1/Lehuo2/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/0.6.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="87bffaacf21eb2c6fc61cf01930ff96ae175e798">
-        <dex dex="/Users/renwendi/Desktop/E20/E1/Lehuo2/app/build/intermediates/pre-dexed/debug/classes-54431a60f098b269d04c4d83131ce1908302bc00.jar" />
-    </item>
-    <item
-        jar="/Users/renwendi/Documents/class/database/Lehuo/Lehuo/app/libs/commons-codec-1.9.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="9ce04e34240f674bc72680f8b843b1457383161a">
-        <dex dex="/Users/renwendi/Documents/class/database/Lehuo/Lehuo/app/build/intermediates/pre-dexed/debug/commons-codec-1.9-8956a5fb4c7324fde85ffdac7d4c9c5974fc71f2.jar" />
-    </item>
-    <item
-        jar="/Users/renwendi/Documents/class/database/Lehuo/Lehuo/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/0.6.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="87bffaacf21eb2c6fc61cf01930ff96ae175e798">
-        <dex dex="/Users/renwendi/Documents/class/database/Lehuo/Lehuo/app/build/intermediates/pre-dexed/debug/classes-c701ce002b34c0d73b62ec96c9e9ea550da63621.jar" />
-    </item>
-    <item
-        jar="/Users/renwendi/Desktop/E1/Lehuo2/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/0.6.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="87bffaacf21eb2c6fc61cf01930ff96ae175e798">
-        <dex dex="/Users/renwendi/Desktop/E1/Lehuo2/app/build/intermediates/pre-dexed/debug/classes-f2f6b48797eb8630f99916391da2084da06059aa.jar" />
-    </item>
-    <item
-        jar="/Users/renwendi/Documents/class/database/Lehuo/Lehuo/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
-        <dex dex="/Users/renwendi/Documents/class/database/Lehuo/Lehuo/app/build/intermediates/pre-dexed/debug/classes-a51a953ab55fd78b0d644064c43a7c78e84dad00.jar" />
-    </item>
-    <item
-        jar="/Users/renwendi/Desktop/E20/E1/Lehuo2/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/jars/libs/internal_impl-23.2.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="6e239441500605809818997dd63b62a947195f8c">
-        <dex dex="/Users/renwendi/Desktop/E20/E1/Lehuo2/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.0-80195540c0dcc50521a38e988f821719668f5997.jar" />
-    </item>
-    <item
-        jar="/Users/renwendi/Desktop/E1/Lehuo2/app/libs/commons-codec-1.9.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="9ce04e34240f674bc72680f8b843b1457383161a">
-        <dex dex="/Users/renwendi/Desktop/E1/Lehuo2/app/build/intermediates/pre-dexed/debug/commons-codec-1.9-d126b31ae66c3525372c6066fbfc214faa613595.jar" />
-    </item>
-    <item
-        jar="/Users/renwendi/Desktop/E1/Lehuo2/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d4c936aa8c7d2522c82e3f1829c791d9e367f009">
-        <dex dex="/Users/renwendi/Desktop/E1/Lehuo2/app/build/intermediates/pre-dexed/debug/classes-a11ef63f0d6fd20a13715f3542ec5248dcec0195.jar" />
-    </item>
-    <item
-        jar="/Users/renwendi/Documents/class/database/Lehuo/Lehuo/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
-        <dex dex="/Users/renwendi/Documents/class/database/Lehuo/Lehuo/app/build/intermediates/pre-dexed/debug/classes-71de48a7093ac991ecf10b017592a8239ee0cce5.jar" />
-    </item>
-    <item
-        jar="/Users/renwendi/Desktop/E20/E1/Lehuo2/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/0.6.0/jars/classes.jar"
+        jar="D:\E20\E1\Lehuo2\app\build\intermediates\exploded-aar\com.facebook.fresco\fresco\0.6.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="27ebd5d2c69a1830b4ff47a1d5d4c6a4aab5e233">
-        <dex dex="/Users/renwendi/Desktop/E20/E1/Lehuo2/app/build/intermediates/pre-dexed/debug/classes-d480a26df7fb3b5045abad623c26a5b28ad83d54.jar" />
+        <dex dex="D:\E20\E1\Lehuo2\app\build\intermediates\pre-dexed\debug\classes-080b2e7aebbe7f8271d507bd08af4b9c1b977de6.jar" />
     </item>
     <item
-        jar="/Users/renwendi/Documents/class/database/Lehuo/Lehuo/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.0/jars/classes.jar"
+        jar="D:\E20\E1\Lehuo2\app\build\intermediates\exploded-aar\com.facebook.fresco\drawee\0.6.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="b266c8faa5af72e579b9da36ef35053ffed6ac64">
-        <dex dex="/Users/renwendi/Documents/class/database/Lehuo/Lehuo/app/build/intermediates/pre-dexed/debug/classes-f752b46f3811bfb20a00e1e9bf5669724bd3fe9a.jar" />
+        sha1="d572f92ecb6ae3b66e807550b07e4a6cca1f737f">
+        <dex dex="D:\E20\E1\Lehuo2\app\build\intermediates\pre-dexed\debug\classes-ee3c3a9c707039b21b1c4d3044bbda9dfb1ceefc.jar" />
     </item>
     <item
-        jar="/Users/renwendi/Documents/class/database/Lehuo/Lehuo/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/0.6.0/jars/classes.jar"
+        jar="C:\Users\Noel_Cat\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.2.0\support-annotations-23.2.0.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="27ebd5d2c69a1830b4ff47a1d5d4c6a4aab5e233">
-        <dex dex="/Users/renwendi/Documents/class/database/Lehuo/Lehuo/app/build/intermediates/pre-dexed/debug/classes-a8ba09eff77e86e350cdd22023603c83f4b2a837.jar" />
+        sha1="c5bf571bb10462bd90e5419ade67793f71acbc87">
+        <dex dex="D:\E20\E1\Lehuo2\app\build\intermediates\pre-dexed\debug\support-annotations-23.2.0-081e84e11021e2262e5a8d646d6dc58fa549a473.jar" />
     </item>
     <item
-        jar="/Users/renwendi/Desktop/E20/E1/Lehuo2/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.2.0/jars/classes.jar"
+        jar="D:\E20\E1\Lehuo2\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.2.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="d4c936aa8c7d2522c82e3f1829c791d9e367f009">
-        <dex dex="/Users/renwendi/Desktop/E20/E1/Lehuo2/app/build/intermediates/pre-dexed/debug/classes-e46fe921e54b5f2649a2f518e6b48c1a51847140.jar" />
+        <dex dex="D:\E20\E1\Lehuo2\app\build\intermediates\pre-dexed\debug\classes-6334a0cb5b9756e91279308d9d7c0ec36879ed20.jar" />
     </item>
     <item
-        jar="/Users/renwendi/Desktop/E20/E1/Lehuo2/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/jars/classes.jar"
+        jar="D:\E20\E1\Lehuo2\app\libs\commons-codec-1.9.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="9ce04e34240f674bc72680f8b843b1457383161a">
+        <dex dex="D:\E20\E1\Lehuo2\app\build\intermediates\pre-dexed\debug\commons-codec-1.9-420ae2969e30bb5ab0f7badb667e954b0486fc37.jar" />
+    </item>
+    <item
+        jar="C:\Users\Noel_Cat\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="D:\E20\E1\Lehuo2\app\build\intermediates\pre-dexed\debug\library-2.4.0-2f4a9063ce214eefdeeeaecf06e4dccdc3790573.jar" />
+    </item>
+    <item
+        jar="D:\E20\E1\Lehuo2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="e5f32fa48a3eb2de0c987025c11b6e3864b634d9">
-        <dex dex="/Users/renwendi/Desktop/E20/E1/Lehuo2/app/build/intermediates/pre-dexed/debug/classes-7a0ce037e749abd26841761db87f340b69de931f.jar" />
-    </item>
-    <item
-        jar="/Users/renwendi/Documents/software/android-sdk-macosx/extras/android/m2repository/com/android/support/support-annotations/25.1.0/support-annotations-25.1.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
-        <dex dex="/Users/renwendi/Documents/class/database/Lehuo/Lehuo/app/build/intermediates/pre-dexed/debug/support-annotations-25.1.0-6670b4c18fbcebddfab374d5b6c2d128643d5189.jar" />
-    </item>
-    <item
-        jar="/Users/renwendi/Documents/class/database/Lehuo/Lehuo/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/renwendi/Documents/class/database/Lehuo/Lehuo/app/build/intermediates/pre-dexed/debug/classes-33520ad681ed6a58ca030d4a6496c0c2659fe677.jar" />
+        <dex dex="D:\E20\E1\Lehuo2\app\build\intermediates\pre-dexed\debug\classes-113ddd39cb813a9041f596d1d41d88a7341d05d2.jar" />
     </item>
 
 </items>

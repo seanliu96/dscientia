@@ -15,17 +15,17 @@ public class User {
     private String uid;
     private String name;
     private String avatar;
-    /*private String major;
-    private String grade;
-    private String sex;*/
+    private int nbsNum;
     private int colsNum;
     private int focusNum;
     private List<String> cols;
     private List<String> focus;
+    private List<String> notebooks;
 
     public User() {
         cols = new ArrayList<String>();
         focus = new ArrayList<String>();
+        notebooks = new ArrayList<String>();
     }
 
     public String getAvatar() {
@@ -36,22 +36,6 @@ public class User {
         this.avatar = avatar;
     }
 
-    /*public String getGrade() {
-        return grade;
-    }
-
-    public void setGrade(String grade) {
-        this.grade = grade;
-    }
-
-    public String getMajor() {
-        return major;
-    }
-
-    public void setMajor(String major) {
-        this.major = major;
-    }*/
-
     public String getName() {
         return name;
     }
@@ -60,14 +44,6 @@ public class User {
         this.name = name;
     }
 
-    /*public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
-    }*/
-
     public String getUid() {
         return uid;
     }
@@ -75,6 +51,7 @@ public class User {
     public void setUid(String uid) {
         this.uid = uid;
     }
+
 
     public List<String> getCols() {
         return cols;
@@ -108,6 +85,22 @@ public class User {
         this.focusNum = focusNum;
     }
 
+    public int getNbsNum() {
+        return nbsNum;
+    }
+
+    public void setNbsNum(int nbsNum) {
+        this.nbsNum = nbsNum;
+    }
+
+    public List<String> getNotebooks() {
+        return notebooks;
+    }
+
+    public void setNotebooks(List<String> notebooks) {
+        this.notebooks = notebooks;
+    }
+
     public boolean isActivityCollected(Note note) {
         for (String s : cols) {
             if (s.equals(note.getId())) {
@@ -124,6 +117,11 @@ public class User {
             }
         }
         return false;
+    }
+
+    public void addNoteBooks(String noteBook) {
+        notebooks.add(noteBook);
+        colsNum++;
     }
 
     public void addCollection(String aid) {
@@ -157,12 +155,10 @@ public class User {
     }
 
     public static void save(Context context, User user) {
-        //SPUtil.put(context, "major", user.getMajor());
         SPUtil.put(context, "name", user.getName());
-        //SPUtil.put(context, "grade", user.getGrade());
-        //SPUtil.put(context, "sex", user.getSex());
         SPUtil.put(context, "avatar_url", user.getAvatar());
         SPUtil.put(context, "uid", user.getUid());
+        SPUtil.put(context, "nbsNum", user.getNbsNum());
         SPUtil.put(context, "colsNum", user.getColsNum());
         SPUtil.put(context, "focusNum", user.getFocusNum());
         for (int i = 0; i < user.getCols().size(); i++) {
@@ -171,20 +167,22 @@ public class User {
         for (int i = 0; i < user.getFocus().size(); i++) {
             SPUtil.put(context, "focus" + i, user.getFocus().get(i));
         }
+        for (int i = 0; i < user.getNotebooks().size(); i++) {
+            SPUtil.put(context, "noteBooks" + i, user.getNotebooks().get(i));
+        }
     }
 
     public static User load(Context context) {
         User user = new User();
         user.setName((String) SPUtil.get(context, "name", ""));
-        //user.setMajor((String) SPUtil.get(context, "major", ""));
-        //user.setGrade((String) SPUtil.get(context, "grade", ""));
         user.setAvatar((String) SPUtil.get(context, "avatar_url", ""));
-        //user.setSex((String) SPUtil.get(context, "sex", ""));
         user.setUid((String) SPUtil.get(context, "uid", ""));
         user.setColsNum((Integer) SPUtil.get(context, "colsNum", 0));
         user.setFocusNum((Integer) SPUtil.get(context, "focusNum", 0));
+        user.setFocusNum((Integer) SPUtil.get(context, "nbsNum", 0));
         List<String> cols = new ArrayList<String>();
         List<String> focus = new ArrayList<String>();
+        List<String> noteBooks = new ArrayList<String>();
         for (int i = 0; i < user.getColsNum(); i++) {
             cols.add((String) SPUtil.get(context, "col" + i, ""));
         }
@@ -193,25 +191,34 @@ public class User {
             focus.add((String) SPUtil.get(context, "focus" + i, ""));
         }
         user.setFocus(focus);
+
+        for (int i = 0; i < user.getNotebooks().size(); i++) {
+            SPUtil.put(context, "noteBooks" + i, user.getNotebooks().get(i));
+        }
+
+        user.setNotebooks(noteBooks);
         return user;
     }
 
     public static void clear(Context context) {
         SPUtil.remove(context, "name");
-        //SPUtil.remove(context, "major");
-        //SPUtil.remove(context, "grade");
-        //SPUtil.remove(context, "sex");
         SPUtil.remove(context, "avatar_url");
         SPUtil.remove(context, "uid");
+        SPUtil.remove(context, "nbid");
         int colsNum = (int) SPUtil.get(context, "colsNum", 0);
         int focusNum = (int) SPUtil.get(context, "focusNum", 0);
+        int nbsNum = (int) SPUtil.get(context, "nbsNum", 0);
         SPUtil.remove(context, "colsNum");
         SPUtil.remove(context, "focusNum");
+        SPUtil.remove(context, "nbsNum");
         for (int i = 0; i < colsNum; i++) {
             SPUtil.remove(context, "col" + i);
         }
         for (int i = 0; i < focusNum; i++) {
             SPUtil.remove(context, "focus" + i);
+        }
+        for (int i = 0; i < nbsNum; i++) {
+            SPUtil.remove(context, "noteBooks" + i);
         }
     }
 

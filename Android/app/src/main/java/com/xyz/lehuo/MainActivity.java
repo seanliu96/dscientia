@@ -24,7 +24,6 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.xyz.lehuo.bean.EditActivity;
 import com.xyz.lehuo.bean.User;
-import com.xyz.lehuo.datebase.DatabaseManager;
 import com.xyz.lehuo.discover.DiscoverFragment;
 import com.xyz.lehuo.First.FirstFragment;
 import com.xyz.lehuo.global.BaseFragActivity;

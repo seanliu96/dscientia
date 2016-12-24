@@ -21,6 +21,7 @@ public class Constant {
     public static final String NOTE_TABLE_NAME = "Notes";
     public static final String APP_PATH = Environment.getExternalStorageDirectory() + "/Dscientia/";
     public static final String FILE_NAME = "config";
+    public static final String NOTE_LIST_FILE_NAME = "enote_note_name_list.txt";
 
 
     /*public static final String SERVER_ADDRESS = "http://172.18.71.35:8080";

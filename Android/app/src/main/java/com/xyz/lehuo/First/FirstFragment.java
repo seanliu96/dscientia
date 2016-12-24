@@ -51,6 +51,7 @@ public class FirstFragment extends Fragment {
 
     private SwipeRefreshLayout refreshLayout;
     private ListView listView;
+    //private List<com.xyz.lehuo.bean.Note> activities = new ArrayList<com.xyz.lehuo.bean.Note>();
     private List<com.xyz.lehuo.bean.Note> activities = new ArrayList<com.xyz.lehuo.bean.Note>();
     private FirstAdapter adapter;
     private ViewPager vp;
@@ -62,6 +63,7 @@ public class FirstFragment extends Fragment {
     private List<String> bannerUrls = new ArrayList<String>();
     private ProgressDialog pd;
     private DatabaseManager databaseManager;
+    //private List<Note> allActivities = new ArrayList<>();
     private List<Note> allActivities = new ArrayList<>();
 
     ImageHandler handler;
@@ -192,7 +194,6 @@ public class FirstFragment extends Fragment {
                 bannerUrls.clear();
                 JSONArray array = jsonObject.getJSONArray("data");
                 for (int i = 0; i < array.length(); i++) {
-                    //Note activity = new Note();
                     Note activity = new Note();
                     JSONObject jo = array.optJSONObject(i);
                     activity.setDate(jo.getString("note_date"));
@@ -203,11 +204,11 @@ public class FirstFragment extends Fragment {
                     activity.setId(jo.getString("note_id"));
                     activity.setDetailUrl(jo.getString("detail_url"));
                     allActivities.add(activity);
-                    if (i < 5) {
+                    /*if (i < 5) {
                         bannerUrls.add(activity.getImgUrl());
                     } else {
                         activities.add(activity);
-                    }
+                    }*/
                 }
                 databaseManager.clearActivityTable();
                 databaseManager.addActivities(allActivities);
@@ -227,6 +228,8 @@ public class FirstFragment extends Fragment {
                 }
                 bannerAdapter.setData(bannerUrls);
                 adapter.setData(activities);
+
+
             }
             if (dots.size() == 0) {
                 initDotGroup();
@@ -260,14 +263,14 @@ public class FirstFragment extends Fragment {
             Toast.makeText(getActivity(), "网络错误", Toast.LENGTH_SHORT).show();
             bannerUrls.clear();
             activities.clear();
-            /*allActivities = databaseManager.getAllActivities();
+            allActivities = databaseManager.getAllActivities();
             for (int i = 0; i < allActivities.size(); i++) {
                 if (i < 5) {
                     bannerUrls.add(allActivities.get(i).getImgUrl());
                 } else {
                     activities.add(allActivities.get(i));
                 }
-            }*/
+            }
             bannerAdapter.setData(bannerUrls);
             adapter.setData(activities);
             if (dots.size() == 0) {
@@ -304,7 +307,6 @@ public class FirstFragment extends Fragment {
             bannerUrls.clear();
             activities.clear();
             allActivities = databaseManager.getAllActivities();
-
             for (int i = 0; i < allActivities.size(); i++) {
                 if (i < 5) {
                     bannerUrls.add(allActivities.get(i).getImgUrl());
@@ -312,7 +314,6 @@ public class FirstFragment extends Fragment {
                     activities.add(allActivities.get(i));
                 }
             }
-
             bannerAdapter.setData(bannerUrls);
             adapter.setData(activities);
             if (dots.size() == 0) {

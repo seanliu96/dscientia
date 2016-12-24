@@ -119,11 +119,12 @@ public class LoginActivity extends BaseActivity {
                                 user.setGrade(Constant.grades[Integer.parseInt(object.getString("grade"))]);
                                 user.setSex(object.getString("sex").equals("1") ? "男" : "女");*/
                                 user.setUid(object.getString("_id").substring(9, object.getString("_id").length() - 2));
+                                user.setNbsNum(Integer.parseInt(object.getString("nbsNum")));
                                 user.setAvatar(object.getString("avatar_url"));
                                 JSONArray array = object.getJSONArray("notebooks");
 
                                 for (int i = 0; i < array.length(); i++) {
-                                    user.addCollection(array.getString(i));
+                                    user.addNoteBooks(array.getString(i));
                                 }
 
                                 /*array = object.getJSONArray("like");

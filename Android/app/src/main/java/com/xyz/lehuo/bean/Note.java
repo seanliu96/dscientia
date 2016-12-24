@@ -1,5 +1,9 @@
 package com.xyz.lehuo.bean;
 
+import android.content.Context;
+
+import com.xyz.lehuo.util.SPUtil;
+
 import java.io.Serializable;
 
 /**
@@ -156,6 +160,8 @@ import java.io.Serializable;
 public class Note implements Serializable {
     private static final long serialVersionUID = 1L;
 
+    public static final int SAVE_SUCCESS = 4;
+
     private String mDate;
     private String mWeek;
     private String mContent;
@@ -163,6 +169,7 @@ public class Note implements Serializable {
     private String imgUrl;
     private String detailUrl;
     private String nid;
+    private String nbid;
 
     public String toString() {
         return mNoteName + " Time:" + mDate + " Week:" + mWeek + " Content:" + mContent;
@@ -220,6 +227,22 @@ public class Note implements Serializable {
     public void setId(String nid){this.nid=nid;}
 
     public String getId(){return nid;}
+
+    public void setNbid(String nbid) {
+        this.nbid = nbid;
+    }
+
+    public String getNbid() {
+        return nbid;
+    }
+
+    public static void save(Context context, Note note) {
+        SPUtil.put(context, "note_title", note.getNoteName());
+        SPUtil.put(context, "note_date", note.getDate());
+        SPUtil.put(context, "nid", note.getId());
+        SPUtil.put(context, "note_week", note.getWeek());
+        SPUtil.put(context, "note_content", note.getContent());
+    }
 
 }
 

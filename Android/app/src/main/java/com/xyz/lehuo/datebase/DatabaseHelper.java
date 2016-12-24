@@ -11,7 +11,7 @@ import com.xyz.lehuo.global.Constant;
  */
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    public static int DATABASE_VERSION = 3;
+    public static int DATABASE_VERSION = 1;
 
     public DatabaseHelper(Context context) {
         super(context, Constant.DATABASE_NAME, null, DATABASE_VERSION);

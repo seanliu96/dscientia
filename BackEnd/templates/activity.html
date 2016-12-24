@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ static_url('css/main.css') }}">
+    <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+
+<body>
+<div id="main">
+    <div class="container">
+        <div class="poster row">
+            <div class="col-xs-12">
+                <div class="poster-wrapper">
+                    <img src="{{ img_url }}" alt="24">
+                </div>
+            </div>
+        </div>
+        <div class="title row">
+            <div class="col-xs-3 right">活动名称:</div>
+            <div class="col-xs-9 left">{{ title }}</div>
+        </div>
+        <div class="date row">
+            <div class="col-xs-3 right">活动时间:</div>
+            <div class="col-xs-9 left">{{ start_date }} - {{ end_date }}</div>
+        </div>
+        <div class="time row">
+            <div class="col-xs-3 right">开放时间:</div>
+            <div class="col-xs-9 left">{{ start_time }} - {{ end_time }}</div>
+        </div>
+        <div class="place row">
+            <div class="col-xs-3 right">活动地点:</div>
+            <div class="col-xs-9 left">{{ place }}</div>
+        </div>
+        <div class="detail row">
+            <div class="col-xs-3 right">活动详情:</div>
+            <div class="col-xs-9 left">{{ detail }}</div>
+        </div>
+        <div class="detail row">
+            <div class="col-xs-3 right">阅读量:</div>
+            <div class="col-xs-9 left">{{ read_nums }}</div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
+<script type="text/javascript" src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+
+</html>

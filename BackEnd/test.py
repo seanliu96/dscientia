@@ -48,7 +48,7 @@ def addNote():
     data = {
         "uid": uid,
         "nbid": nbid,
-        "title": name,
+        "title": title,
         "time": time,
         "weekday": weekday,
         "body": body,

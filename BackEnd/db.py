@@ -13,3 +13,22 @@ def remove_db():
     db["NoteBooks"].remove({})
     db["Notes"].remove({})
     db["Recommender"].remove({})
+
+def print_users():
+    db = get_db()
+    users = db["Users"].find()
+    for user in users:
+        print(user)
+
+def print_notebooks():
+    db = get_db()
+    notebooks = db["NoteBooks"].find()
+    for notebook in notebooks:
+        print(notebook)
+
+def print_notes():
+    db = get_db()
+    notes = db["Notes"].find()
+    for note in notes:
+        print(note)
+

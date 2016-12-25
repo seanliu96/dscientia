@@ -32,3 +32,9 @@ def print_notes():
     for note in notes:
         print(note)
 
+def print_recommenders():
+    db = get_db()
+    recommender = db["Recommender"].find()
+    for r in recommender:
+        print(r)
+

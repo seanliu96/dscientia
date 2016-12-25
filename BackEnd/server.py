@@ -67,9 +67,9 @@ class RegisterHandler(BaseHandler):
             self.write(self.make_result(0, "name already exists", None))
             return
         try:
-            new_user = User(**new_user_kw)
             new_notebook = NoteBook(**new_notebook_kw)
             new_notebook.save()
+            new_user = User(**new_user_kw)
             new_user.save()
             User.add_notebook(new_user.uid, new_notebook.nbid)
             self.write(self.make_result(1, "register OK", None))

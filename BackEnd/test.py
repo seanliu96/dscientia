@@ -47,7 +47,7 @@ def addNote():
     body = input("body")
     data = {
         "uid": uid,
-        "nbid", nbid,
+        "nbid": nbid,
         "title": name,
         "time": time,
         "weekday": weekday,

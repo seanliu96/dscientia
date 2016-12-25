@@ -27,9 +27,9 @@ class Recommender(object):
         keywordsVector = [0.0] * len(self.keywords)
         for i in range(len(self.keywords)):
             if title.find(self.keywords[i]) != -1:
-                keywordsVector[i] = 1.0
+                keywordsVector[i] = 10.0
             elif body.find(self.keywords[i]) != -1:
-                keywordsVector[i] = 1.0
+                keywordsVector[i] = 10.0
         return keywordsVector
 
     def saveVector(self, uid, title, body):
@@ -41,9 +41,8 @@ class Recommender(object):
         if doc:
             oldKeywordsVector = doc["keywordsVector"]
             if(len(oldKeywordsVector)) == len(newKeywordsVector):
-                for i in range(len(newKeywordsVector)):
-                    if(oldKeywordsVector[i]):
-                        newKeywordsVector[i] = 1.0
+                for i in range(len(oldKeywordsVector)):
+                    newKeywordsVector[i] += oldKeywordsVector[i]
             db["Recommender"].update(
                 {"uid": uid},
                 {"uid": uid, "keywordsVector": newKeywordsVector}
@@ -71,8 +70,6 @@ class Recommender(object):
 
     def generatePrediction(self):
         from scipy.sparse.linalg import svds
-        print(type(self.train_data_matrix[0][0]))
-        print(self.train_data_matrix)
         u, s, vt = svds(self.train_data_matrix, k=10)
         self.user_prediction = np.dot(np.dot(u, np.diag(s)), vt)
 

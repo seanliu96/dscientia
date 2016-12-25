@@ -50,6 +50,17 @@ class Note(object):
             self.nid = str(nid_obj)
 
     @property
+    def nid(self):
+        return self._nid
+
+    @uid.setter
+    def nid(self, value):
+        if value:
+            self._nid = value
+        else:
+            raise ValueError("You did not provide valid nid")
+
+    @property
     def title(self):
         return self._title
 

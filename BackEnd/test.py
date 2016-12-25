@@ -12,7 +12,7 @@ def register():
     data = parse.urlencode(data)
     req = request.Request(REGISTER_API, data.encode('utf-8'))
     resp = request.urlopen(req)
-    print(resp.read())
+    print(resp.read().decode("utf-8"))
 
 def login():
     name = input("name")
@@ -24,7 +24,7 @@ def login():
     data = parse.urlencode(data)
     req = request.Request(LOGIN_API, data.encode('utf-8'))
     resp = request.urlopen(req)
-    print(resp.read())
+    print(resp.read().decode("utf-8"))
 
 def addNotebook():
     uid = input("uid")
@@ -36,7 +36,7 @@ def addNotebook():
     data = parse.urlencode(data)
     req = request.Request(USER_ADDNOTEBOOK_API, data.encode('utf-8'))
     resp = request.urlopen(req)
-    print(resp.read())
+    print(resp.read().decode("utf-8"))
 
 def addNote():
     uid = input("uid")
@@ -48,12 +48,12 @@ def addNote():
     data = {
         "uid": uid,
         "nbid": nbid,
-        "title": name,
+        "title": title,
         "time": time,
         "weekday": weekday,
         "body": body,
     }
     data = parse.urlencode(data)
-    req = request.Request(NOTEBOOK_ADDNOTE, data.encode('utf-8'))
+    req = request.Request(NOTEBOOK_ADDNOTE_API, data.encode('utf-8'))
     resp = request.urlopen(req)
-    print(resp.read())
+    print(resp.read().decode("utf-8"))

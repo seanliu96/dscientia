@@ -205,7 +205,7 @@ class NoteBookAddNoteHandler(BaseHandler):
             else:
                 new_note = Note(**new_note_kw)
                 new_note.save()
-                NoteBook.add_note(nbid, new_notebook.nid)
+                NoteBook.add_note(nbid, new_note.nid)
                 uid = self.get_argument("uid", None)
                 recommender.saveVector(uid, new_note_kw["title"], new_note_kw["body"])
                 recommender.generateMatrix()

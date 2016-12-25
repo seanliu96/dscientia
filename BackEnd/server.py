@@ -6,6 +6,7 @@ import tornado.httpserver
 import tornado.ioloop
 import tornado.options
 import tornado.web
+from consts import *
 from bson.json_util import dumps
 from tornado.options import define, options
 from models.user import User

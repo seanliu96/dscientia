@@ -141,7 +141,7 @@ class UserAddNoteBookHandler(BaseHandler):
                 new_notebook = NoteBook(**new_notebook_kw)
                 new_notebook.save()
                 User.add_notebook(uid, new_notebook.nbid)
-                self.write(self.make_result(1, "notebook add OK"), None)
+                self.write(self.make_result(1, "notebook add OK", None))
         except ValueError as e:
             self.write(self.make_result(0, str(e), None))
         except IOError as e:

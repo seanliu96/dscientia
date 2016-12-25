@@ -212,7 +212,7 @@ class NoteBookAddNoteHandler(BaseHandler):
                 recommender.computeSimilarity()
                 recommender.generatePrediction()
                 recommendList = recommender.recommend(uid)
-                self.write(self.make_result(1), "note add OK", recommendList)
+                self.write(self.make_result(1, "note add OK", recommendList))
         except ValueError as e:
             self.write(self.make_result(0, str(e), None))
         except IOError as e:

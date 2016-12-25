@@ -22,7 +22,7 @@ def login():
         "pwd": pwd,
     }
     data = parse.urlencode(data)
-    req = request.Request(REGISTER_API, data.encode('utf-8'))
+    req = request.Request(LOGIN_API, data.encode('utf-8'))
     resp = request.urlopen(req)
     print(resp.read())
 
@@ -34,7 +34,7 @@ def addNotebook():
         "name": name,
     }
     data = parse.urlencode(data)
-    req = request.Request(REGISTER_API, data.encode('utf-8'))
+    req = request.Request(USER_ADDNOTEBOOK_API, data.encode('utf-8'))
     resp = request.urlopen(req)
     print(resp.read())
 
@@ -54,6 +54,6 @@ def addNote():
         "body": body,
     }
     data = parse.urlencode(data)
-    req = request.Request(REGISTER_API, data.encode('utf-8'))
+    req = request.Request(NOTEBOOK_ADDNOTE, data.encode('utf-8'))
     resp = request.urlopen(req)
     print(resp.read())

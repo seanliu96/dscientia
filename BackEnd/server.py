@@ -6,7 +6,6 @@ import tornado.httpserver
 import tornado.ioloop
 import tornado.options
 import tornado.web
-from consts import *
 from bson.json_util import dumps
 from tornado.options import define, options
 from models.user import User
@@ -259,17 +258,17 @@ if __name__ == "__main__":
     tornado.options.parse_command_line()
     application = tornado.web.Application(
         handlers=[
-            (INDEX_API, IndexHandler),
-            (LOGIN_API, LoginHandler),
-            (REGISTER_API, RegisterHandler),
-            (USER_UPDATE_API, UserUpdateHandler),
-            (USER_UPLOAD_API, UserUploadHandler),
-            (USER_RESET_API, UserResetHandler),
-            (USER_ADDNOTEBOOK_API, UserAddNoteBookHandler),
-            (NOTEBOOK_UPDATE_API, NoteBookUpdateHandler),
-            (NOTEBOOK_UPLOAD_API, NoteBookUploadHandler),
-            (NOTEBOOK_ADDNOTE_API, NoteBookAddNoteHandler),
-            (NOTE_UPDATE_API, NoteUpdateHandler),
+            (r"/", IndexHandler),
+            (r"/api/login", LoginHandler),
+            (r"/api/register", RegisterHandler),
+            (r"/api/user/update", UserUpdateHandler),
+            (r"/api/user/upload", UserUploadHandler),
+            (r"/api/user/reset", UserResetHandler),
+            (r"/api/user/addnotebook", UserAddNoteBookHandler),
+            (r"/api/notebook/update", NoteBookUpdateHandler),
+            (r"/api/notebook/upload", NoteBookUploadHandler),
+            (r"/api/notebook/addnote", NoteBookAddNoteHandler),
+            (r"/api/note/update", NoteUpdateHandler),
         ],
         template_path=os.path.join(os.path.dirname(__file__), 'templates'),
         static_path=os.path.join(os.path.dirname(__file__), 'static'),

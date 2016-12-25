@@ -69,8 +69,8 @@ class RegisterHandler(BaseHandler):
         try:
             new_user = User(**new_user_kw)
             new_notebook = NoteBook(**new_notebook_kw)
-            new_user.add_notebook(new_user.uid, new_notebook.nbid)
             new_notebook.save()
+            User.add_notebook(new_user.uid, new_notebook.nbid)
             new_user.save()
             self.write(self.make_result(1, "register OK", None))
         except ValueError as e:

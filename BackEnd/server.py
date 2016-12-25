@@ -201,7 +201,7 @@ class NoteBookAddNoteHandler(BaseHandler):
         try:
             notebook = NoteBook.get(nbid)
             if notebook is None:
-                self.write(swle.make_result(0, "notebook not found", None))
+                self.write(self.make_result(0, "notebook not found", None))
                 return
             else:
                 new_note = Note(**new_note_kw)

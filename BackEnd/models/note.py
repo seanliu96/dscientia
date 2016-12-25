@@ -53,7 +53,7 @@ class Note(object):
     def nid(self):
         return self._nid
 
-    @uid.setter
+    @nid.setter
     def nid(self, value):
         if value:
             self._nid = value

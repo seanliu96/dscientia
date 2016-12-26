@@ -32,7 +32,7 @@ class NoteBook(object):
                 {
                     "name": self.name,
                     "cover_url": self.cover_url,
-                    "notes": self.notes,
+                    "notes_id": self.notes_id,
                     "datetime": datetime.now(),
                 },
             )
@@ -41,7 +41,7 @@ class NoteBook(object):
                 {
                     "name": self.name,
                     "cover_url": self.cover_url,
-                    "notes": [],
+                    "notes_id": [],
                     "datetime": datetime.now(),
                 }
             )
@@ -69,8 +69,6 @@ class NoteBook(object):
         else:
             raise ValueError("You did not provide valid nbid")
 
-    
-
     @property
     def cover_url(self):
         return self._cover_url
@@ -96,7 +94,6 @@ class NoteBook(object):
             print(doc)
             nb = cls(**doc)
             nb.nbid = nbid
-            nb._cover_url = doc["cover_url"]
             return nb
         else:
             return None
@@ -120,7 +117,7 @@ class NoteBook(object):
         db = get_db()
         db["NoteBooks"].update(
             {"_id": ObjectId(nbid)},
-            {"$addToSet": {"notes": nid}},
+            {"$addToSet": {"notes_id": nid}},
         )
 
     @classmethod
@@ -128,6 +125,6 @@ class NoteBook(object):
         db = get_db()
         db["NoteBooks"].update(
             {"_id": ObjectId(nbid)},
-            {"$pull": {"notes": nid}},
+            {"$pull": {"notes_id": nid}},
         )
     

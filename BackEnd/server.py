@@ -142,7 +142,13 @@ class UserAddNoteBookHandler(BaseHandler):
                 new_notebook.save()
                 User.add_notebook(uid, new_notebook.nbid)
                 notebook_doc = NoteBook.getdoc(new_notebook.nbid)
-                self.write(self.make_result(1, "notebook add OK", notebook_doc))
+                data = {"notes": []}
+                data.update(notebook_doc)
+                for note_id in notebook_doc["notes_id"]:
+                    note_doc = Note.getdoc(note_id):
+                    if note_doc:
+                        data["notes"].append(note_doc)
+                self.write(self.make_result(1, "notebook add OK", data))
         except ValueError as e:
             self.write(self.make_result(0, str(e), None))
         except IOError as e:
@@ -223,6 +229,21 @@ class NoteBookAddNoteHandler(BaseHandler):
         except IOError as e:
             self.write(self.make_result(0, str(e), None))
 
+class NoteBookGetInfoHandler(BaseHandler):
+    def post(self, *args, **kwargs):
+        nbid = self.get_argument("nbid", None)
+        notebook_doc = NoteBook.getdoc(nbid)
+        if notebook_doc:
+            data = {"notes": []}
+            data.update(notebook_doc)
+            for note_id in notebook_doc["notes_id"]:
+                note_doc = Note.getdoc(note_id):
+                if note_doc:
+                    data["notes"].append(note_doc)
+            self.write(self.make_result(1, "notebook get OK", data))
+        else:
+            self.write(self.make_result(0, "notebook not found", None))
+
 
 class NoteUpdateHandler(BaseHandler):
     def post(self, *args, **kwargs):
@@ -258,6 +279,15 @@ class NoteUpdateHandler(BaseHandler):
         except IOError as e:
             self.write(self.make_result(0, str(e), None))
 
+class NoteGetInfoHandler(BaseHandler):
+    def post(self, *args, **kwargs):
+        nid = self.get_argument("nid", None)
+        note_doc = Note.getdoc(nid)
+        if note_doc:
+            self.write(self.make_result(1, "note get OK", note_doc))
+        else:
+            self.write(self.make_result(0, "note not found", None))
+
 
 if __name__ == "__main__":
     tornado.options.parse_command_line()
@@ -273,7 +303,9 @@ if __name__ == "__main__":
             (r"/api/notebook/update", NoteBookUpdateHandler),
             (r"/api/notebook/upload", NoteBookUploadHandler),
             (r"/api/notebook/addnote", NoteBookAddNoteHandler),
+            (r"/api/notebook/getinfo", NoteBookGetInfoHandler),
             (r"/api/note/update", NoteUpdateHandler),
+            (r"/api/note/getinfo", NoteGetInfoHandler),
         ],
         template_path=os.path.join(os.path.dirname(__file__), 'templates'),
         static_path=os.path.join(os.path.dirname(__file__), 'static'),

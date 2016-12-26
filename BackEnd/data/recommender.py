@@ -4,6 +4,7 @@
 import numpy as np
 import re
 from db import get_db
+import sys
 
 
 class Recommender(object):
@@ -70,9 +71,14 @@ class Recommender(object):
         self.user_similarity = pairwise_distances(self.train_data_matrix, metric='cosine')
 
     def generatePrediction(self):
+        """
         from scipy.sparse.linalg import svds
         u, s, vt = svds(self.train_data_matrix, k=5)
         self.user_prediction = np.dot(np.dot(u, np.diag(s)), vt)
+        """
+        mean_user_rating = self.train_data_matrix.mean(axis=1)
+        ratings_diff = (self.train_data_matrix - mean_user_rating[:,np.newaxis])
+        self.user_prediction = mean_user_rating[:, np.newaxis] + self.user_similarity.dot(ratings_diff) / np.array([np.abs(self.user_similarity).sum(axis=1)]).T
 
     def recommend(self, uid):
         recommendList = []
@@ -95,8 +101,9 @@ class Recommender(object):
         db["Recommender"].remove({})
 
 if __name__ == '__main__':
+    n = sys.argv[1]
     r = Recommender("keywords")
     r.generateMatrix()
     r.computeSimilarity()
     r.generatePrediction()
-    print(r.recommend('0'))
+    print(r.recommend(n))

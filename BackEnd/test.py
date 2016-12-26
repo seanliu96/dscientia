@@ -57,3 +57,30 @@ def addNote():
     req = request.Request(NOTEBOOK_ADDNOTE_API, data.encode('utf-8'))
     resp = request.urlopen(req)
     print(resp.read().decode("utf-8"))
+
+
+def getNotebook():
+    uid = input("uid")
+    nbid = input("nbid")
+    data = {
+        "uid": uid,
+        "nbid": nbid,
+    }
+    data = parse.urlencode(data)
+    req = request.Request(NOTEBOOK_GETINFO_API, data.encode('utf-8'))
+    resp = request.urlopen(req)
+    print(resp.read().decode("utf-8"))
+
+def getNote():
+    uid = input("uid")
+    nbid = input("nbid")
+    nid = input("nid")
+    data = {
+        "uid": uid,
+        "nbid": nbid,
+        "nid": nid,
+    }
+    data = parse.urlencode(data)
+    req = request.Request(NOTE_GETINFO_API, data.encode('utf-8'))
+    resp = request.urlopen(req)
+    print(resp.read().decode("utf-8"))

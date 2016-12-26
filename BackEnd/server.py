@@ -36,6 +36,7 @@ class BaseHandler(tornado.web.RequestHandler):
         }
         if data:
             rst["data"] = data
+        print(rst)
         return dumps(rst)
 
 class IndexHandler(BaseHandler):

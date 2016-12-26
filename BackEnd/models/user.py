@@ -130,7 +130,6 @@ class User(object):
         db = get_db()
         doc = db["Users"].find_one({"_id": ObjectId(uid)})
         if doc:
-            print(doc)
             u = cls(**doc)
             u._avatar_url = doc["avatar_url"]
             u._notebooks = doc["notebooks"]

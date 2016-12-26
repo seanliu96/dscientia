@@ -102,6 +102,15 @@ class NoteBook(object):
             return None
 
     @classmethod
+    def getdoc(cls, nbid):
+        db = get_db()
+        doc = db["NoteBooks"].find_one({"_id": ObjectId(nbid)})
+        if doc:
+            return doc
+        else:
+            return None
+
+    @classmethod
     def reset(cls):
         db = get_db()
         db["NoteBooks"].remove({})

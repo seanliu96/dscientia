@@ -141,7 +141,7 @@ class UserAddNoteBookHandler(BaseHandler):
                 new_notebook = NoteBook(**new_notebook_kw)
                 new_notebook.save()
                 User.add_notebook(uid, new_notebook.nbid)
-                notebook_doc = NoteBook.get(new_notebook.nbid)
+                notebook_doc = NoteBook.getdoc(new_notebook.nbid)
                 self.write(self.make_result(1, "notebook add OK", notebook_doc))
         except ValueError as e:
             self.write(self.make_result(0, str(e), None))
@@ -213,7 +213,11 @@ class NoteBookAddNoteHandler(BaseHandler):
                 recommender.computeSimilarity()
                 recommender.generatePrediction()
                 recommendList = recommender.recommend(uid)
-                self.write(self.make_result(1, "note add OK", {"recommend" :recommendList}))
+                note_doc = Note.getdoc(new_note.nid)
+                data = {}
+                data.update(note_doc)
+                data["recommend"] = recommendList
+                self.write(self.make_result(1, "note add OK", data))
         except ValueError as e:
             self.write(self.make_result(0, str(e), None))
         except IOError as e:

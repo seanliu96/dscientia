@@ -117,6 +117,15 @@ class Note(object):
             return None
 
     @classmethod
+    def getdoc(cls, nid):
+        db = get_db()
+        doc = db["Notes"].find_one({"_id": ObjectId(nid)})
+        if doc:
+            return doc
+        else:
+            return None
+
+    @classmethod
     def reset(cls):
         db = get_db()
         db["Notes"].remove({})

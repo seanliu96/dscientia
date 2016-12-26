@@ -14,7 +14,6 @@ def InsertData():
             lines = f.readlines()
             for line in lines:
                 body += line + "\n"
-        print(file)
         recommender.saveVector(file, title, body)
     recommender.generateMatrix()
     print(recommender.train_data_matrix)

@@ -26,9 +26,9 @@ class Recommender(object):
         keywordsVector = [0.0] * len(self.keywords)
         for i in range(len(self.keywords)):
             if title.find(self.keywords[i]) != -1:
-                keywordsVector[i] = 10.0
+                keywordsVector[i] = 1.0
             elif body.find(self.keywords[i]) != -1:
-                keywordsVector[i] = 10.0
+                keywordsVector[i] = 1.0
         return keywordsVector
 
     def saveVector(self, uid, title, body):
@@ -62,6 +62,8 @@ class Recommender(object):
             index += 1
             self.train_data_matrix.append(doc["keywordsVector"])
         self.train_data_matrix = np.array(self.train_data_matrix)
+        from sklearn.preprocessing import normalize
+        self.train_data_matrix = normalize(self.train_data_matrix, norm="l2")
 
     def computeSimilarity(self):
         from sklearn.metrics.pairwise import pairwise_distances
@@ -78,7 +80,7 @@ class Recommender(object):
         for i in range(3):
             max_index = -1
             for j in range(len(self.user_prediction[index])):
-                if self.train_data_matrix[index][j] == 0:
+                if self.train_data_matrix[index][j] <= 0.01:
                     if j not in recommendList:
                         if max_index == -1 or self.user_prediction[index][j] < self.user_prediction[index][max_index]:
                             max_index = j
@@ -97,4 +99,4 @@ if __name__ == '__main__':
     r.generateMatrix()
     r.computeSimilarity()
     r.generatePrediction()
-    print(r.recommend('1'))
+    print(r.recommend('0'))

@@ -5,8 +5,6 @@ import numpy as np
 import re
 from db import get_db
 
-keywords = []
-userMap = {}
 
 class Recommender(object):
     def __init__(self, fileName):
@@ -15,6 +13,7 @@ class Recommender(object):
         self.userMap = {}
 
     def readKeywords(self, fileName):
+        keywords = []
         with open(fileName, "r") as f:
             while True:
                 line  = f.readline()
@@ -70,7 +69,7 @@ class Recommender(object):
 
     def generatePrediction(self):
         from scipy.sparse.linalg import svds
-        u, s, vt = svds(self.train_data_matrix, k=10)
+        u, s, vt = svds(self.train_data_matrix, k=5)
         self.user_prediction = np.dot(np.dot(u, np.diag(s)), vt)
 
     def recommend(self, uid):
@@ -86,7 +85,7 @@ class Recommender(object):
             recommendList.append(max_index)
         recommendList = sorted(recommendList)
         for i in range(len(recommendList)):
-            recommendList[i] = keywords[recommendList[i]]
+            recommendList[i] = self.keywords[recommendList[i]]
         return recommendList
 
     def reset(self):
@@ -94,8 +93,8 @@ class Recommender(object):
         db["Recommender"].remove({})
 
 if __name__ == '__main__':
-    r = Recommender()
+    r = Recommender("keywords")
     r.generateMatrix()
     r.computeSimilarity()
     r.generatePrediction()
-    print(r.recommend(3))
+    print(r.recommend('1'))

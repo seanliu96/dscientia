@@ -145,7 +145,7 @@ class UserAddNoteBookHandler(BaseHandler):
                 data = {"notes": []}
                 data.update(notebook_doc)
                 for note_id in notebook_doc["notes_id"]:
-                    note_doc = Note.getdoc(note_id):
+                    note_doc = Note.getdoc(note_id)
                     if note_doc:
                         data["notes"].append(note_doc)
                 self.write(self.make_result(1, "notebook add OK", data))
@@ -237,7 +237,7 @@ class NoteBookGetInfoHandler(BaseHandler):
             data = {"notes": []}
             data.update(notebook_doc)
             for note_id in notebook_doc["notes_id"]:
-                note_doc = Note.getdoc(note_id):
+                note_doc = Note.getdoc(note_id)
                 if note_doc:
                     data["notes"].append(note_doc)
             self.write(self.make_result(1, "notebook get OK", data))

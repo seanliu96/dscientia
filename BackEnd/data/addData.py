@@ -15,7 +15,7 @@ def InsertData(n=1000):
             keywords.append(line.strip('\n'))
     l = len(keywords)
     for i in range(n):
-        index = random.randint(0, l-1)
+        index = i % l;
         title = ""
         body = ""
         for j in range(10):

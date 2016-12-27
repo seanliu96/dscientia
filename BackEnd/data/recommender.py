@@ -86,7 +86,7 @@ class Recommender(object):
         for i in range(3):
             max_index = -1
             for j in range(len(self.user_prediction[index])):
-                if self.train_data_matrix[index][j] <= 0.01:
+                if self.train_data_matrix[index][j] != 0.0:
                     if j not in recommendList:
                         if max_index == -1 or self.user_prediction[index][j] < self.user_prediction[index][max_index]:
                             max_index = j
